@@ -1,0 +1,12 @@
+<tr>
+  <td><%= link_to user.first_name + " " + user.last_name, user %></td>
+  <td><%= user.email %></td>
+  <td><%= user.phone %></td>
+  <td><%= user.twitter %></td>
+  <%# user.admin_id %>
+  <td>
+    <p>
+      <%= link_to "Delete", user, data: {turbo_method: :delete, turbo_confirm: 'Are you sure to delete?'}, class: "btn btn-sm btn-outline-danger" %>
+    </p>
+  </td>
+</tr>

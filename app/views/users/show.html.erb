@@ -1,0 +1,11 @@
+<%#= render @user %>
+<%= render "show", user: @user %>
+
+<div>
+  <% #if @user.admin == current_admin%>
+    <%= link_to "Edit this user", edit_user_path(@user), class: "btn btn-primary" %>
+    <%= link_to "Delete", @user, data: {turbo_method: :delete, turbo_confirm: 'Are you sure to delete?'}, class: "btn btn-danger" %>
+  <% #end %>
+  <br><br>
+  <%= link_to "Back to users", users_path, class: "btn btn-secondary" %>
+</div>

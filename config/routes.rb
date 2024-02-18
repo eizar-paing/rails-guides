@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  resources :users
+  # root 'home#index'
+  root 'users#index'
+  # get 'home/index'
+  get 'home/about'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
